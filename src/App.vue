@@ -1,14 +1,27 @@
 <script setup>
-// 這裡寫 JavaScript 邏輯
+import Navbar from './components/Navbar.vue'
 </script>
 
 <template>
-  <div>
-    <h1>臺北市立大學臨時停車申請系統🚗</h1>
+  <div class="app-container">
+    <Navbar />
+    <!-- 頁面切換內容呈現區 -->
+    <main class="main-body">
+      <router-view />
+    </main>
   </div>
-
 </template>
 
-<style scoped>
-/* 這裡寫 CSS 樣式 */
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F4F2EE; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.main-body {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px;
+}
 </style>
